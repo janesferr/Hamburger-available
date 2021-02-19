@@ -84,22 +84,20 @@ const orm = {
       cb(result);
     });
   },
+  delete(table, condition, cb) {
+    let queryString = `DELETE FROM ${table}`;
+    queryString += ' WHERE ';
+    queryString += condition;
 
-// Add a delete function
-delete(table, condition, cb) {
-  let queryString = `DELETE FROM ${table}`;
-  //queryString += ' SET ';
-  //queryString += objToSql(objColVals);
-  queryString += ' WHERE ';
-  queryString += condition;
-  console.log(queryString);
-  connection.query(queryString, (err, result) => {
-    if (err) {
-      throw err;
-    }
-    cb(result);
-  });
-}
-}
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+};
+
 // Export the orm object for the model (cat.js).
 module.exports = orm;
