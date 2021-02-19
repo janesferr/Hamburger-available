@@ -1,0 +1,13 @@
+<li>
+	{{name}}
+
+	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
+		{{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
+	</button>
+	{{!-- <button class="change-delete" data-id="{{id}}" data-delete="{{delete}}">
+		{{#if delete}}Delete{{else}}Don't Delete{{/if}}
+	</button> --}}
+	<button id="change-delete" data-id="{{id}}" data-delete="{{delete}}">
+		{{#if delete}}Don't Delete{{else}}Delete{{/if}}
+	</button>
+</li>
