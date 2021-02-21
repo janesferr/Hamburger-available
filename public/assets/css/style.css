@@ -3,6 +3,9 @@ li {
   margin: 5px;
   background: #faebd7;
 }
+*{
+  background: orange;
+}
 
 .label {
   font-weight: bold;
